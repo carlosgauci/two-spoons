@@ -10,7 +10,10 @@ const Header = () => {
     <header className={styles.header}>
       <section className={styles.container}>
         <Link to="/">
-          <Img fixed={logo.childImageSharp.fixed} />
+          <Img
+            fixed={logo.childImageSharp.fixed}
+            imgStyle={{ objectFit: "contain" }}
+          />
         </Link>
         <div className={styles.icon}>
           <HiMenu />

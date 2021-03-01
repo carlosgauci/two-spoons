@@ -1,0 +1,43 @@
+@import "../../css/variables.scss";
+
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+.mint {
+  top: 10px;
+  right: 0;
+  transform: translateX(40px) rotate(20deg);
+  z-index: 90;
+}
+
+.container {
+  @include section-center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.text {
+  h2,
+  p {
+    margin-bottom: 1.25rem;
+    z-index: 99;
+  }
+
+  p:first-of-type {
+    margin-right: 3.5rem;
+  }
+}
+
+.imageContainer {
+  width: 80%;
+  margin: 3rem auto 2rem;
+  border-radius: 10px;
+  transform: translate(15px, -15px);
+}
+
+.image {
+  border-radius: 10px;
+  transform: translate(-25px, 25px);
+}
