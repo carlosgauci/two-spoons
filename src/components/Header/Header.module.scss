@@ -9,8 +9,8 @@
 
 .container {
   @include section-center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   @include flex-row;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,6 @@
   .container {
     height: 100%;
     @include flex-col;
-    // justify-content: center;
   }
 
   .icon {
