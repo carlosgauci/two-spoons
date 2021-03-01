@@ -1,0 +1,43 @@
+@import "../../css/variables.scss";
+
+.footer {
+  background-color: $black;
+
+  p {
+    color: $white-text;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.container {
+  @include section-center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include flex-col;
+  align-items: center;
+}
+
+.social {
+  margin-top: 0.5rem;
+  svg {
+    font-size: 2rem;
+    color: $white-text;
+    margin: 0 0.25rem;
+  }
+}
+
+.phone {
+  @include flex-row;
+  align-items: center;
+
+  svg {
+    color: $white-text;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}
