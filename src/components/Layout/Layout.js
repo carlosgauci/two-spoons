@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { AnimatePresence } from "framer-motion"
 import PropTypes from "prop-types"
 import Header from "../Header/Header"
 import Navigation from "../Navigation/Navigation"
@@ -10,7 +11,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header navOpen={navOpen} setNavOpen={setNavOpen} />
-      {navOpen && <Navigation setNavOpen={setNavOpen} />}
+      <AnimatePresence>
+        {navOpen && <Navigation setNavOpen={setNavOpen} />}
+      </AnimatePresence>
       <main>{children}</main>
       <Footer />
     </>

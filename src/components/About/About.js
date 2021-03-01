@@ -8,7 +8,7 @@ const About = () => {
   const { about, mint } = useStaticQuery(query)
 
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <div className={styles.container}>
         <Img
           fixed={mint.childImageSharp.fixed}

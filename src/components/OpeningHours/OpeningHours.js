@@ -5,7 +5,7 @@ import styles from "./OpeningHours.module.scss"
 
 const OpeningHours = () => {
   return (
-    <section className={styles.opening}>
+    <section className={styles.opening} id="contact">
       <div className={styles.container}>
         <h2>Opening Hours</h2>
         <section className={styles.hours}>
