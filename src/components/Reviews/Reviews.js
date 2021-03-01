@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import SingleReview from "../SingleReview/SingleReview"
+import { reviews } from "../../data/reviews"
 import styles from "./Reviews.module.scss"
 
 const Reviews = () => {
@@ -28,6 +30,13 @@ const Reviews = () => {
               <br />
               customers say..
             </h2>
+            <SingleReview
+              text={
+                "The food is exceptionally good, the steak was cooked to perfection and the desserts are delicious! You would not be disappointed eating here."
+              }
+              name={"Carmen Buhagiar"}
+              platform={"Tripadvisor"}
+            />
           </section>
         </div>
       </div>
