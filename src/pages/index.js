@@ -4,6 +4,7 @@ import Hero from "../components/Hero/Hero"
 import About from "../components/About/About"
 import Reviews from "../components/Reviews/Reviews"
 import OpeningHours from "../components/OpeningHours/OpeningHours"
+import FindUs from "../components/FindUs/FindUs"
 
 const IndexPage = () => (
   <>
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <About />
     <Reviews />
     <OpeningHours />
+    <FindUs />
   </>
 )
 

@@ -20,7 +20,7 @@ const OpeningHours = () => {
         </section>
         <section className={styles.book}>
           <div className={styles.phone}>
-            <FaPhone /> <h4>7900 7289 / 7922 7063</h4>
+            <FaPhone /> <h4>21382306 / 79227063</h4>
           </div>
           <button>BOOK NOW</button>
         </section>

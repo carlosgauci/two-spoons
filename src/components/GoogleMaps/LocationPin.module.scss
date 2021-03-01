@@ -1,0 +1,23 @@
+@import "../../css/variables.scss";
+
+.container {
+  background-color: $white-text;
+  padding: 0.5rem 1rem;
+  @include flex-col;
+  align-items: center;
+
+  p {
+    margin-bottom: 0.25rem;
+    font-family: $font;
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $primary;
+    color: $white-text;
+    font-size: 0.8rem;
+  }
+}
