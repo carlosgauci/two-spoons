@@ -2,7 +2,7 @@ import React from "react"
 import { AiFillStar } from "react-icons/ai"
 import styles from "./SingleReview.module.scss"
 
-const SingleReview = ({ text, name, platform }) => {
+const SingleReview = ({ review: { text, name, platform } }) => {
   return (
     <article className={styles.review}>
       <div className={styles.stars}>

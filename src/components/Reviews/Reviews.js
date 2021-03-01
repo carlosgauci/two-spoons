@@ -3,11 +3,14 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import SingleReview from "../SingleReview/SingleReview"
 import { reviews } from "../../data/reviews"
+import AliceCarousel from "react-alice-carousel"
+import "react-alice-carousel/lib/alice-carousel.css"
 import styles from "./Reviews.module.scss"
 
 const Reviews = () => {
   const { mobile, desktop } = useStaticQuery(query)
 
+  // gatsby-bg-image responsive settings
   const images = [
     mobile.childImageSharp.fluid,
     {
@@ -15,6 +18,19 @@ const Reviews = () => {
       media: `(min-width: 768px)`,
     },
   ]
+
+  //   Carousel items
+  const items = reviews.map(review => {
+    return <SingleReview key={review.id} review={review} />
+  })
+
+  //   Carousel responsive settings
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 2 },
+    1024: { items: 3 },
+  }
+
   return (
     <BackgroundImage
       Tag="section"
@@ -30,12 +46,14 @@ const Reviews = () => {
               <br />
               customers say..
             </h2>
-            <SingleReview
-              text={
-                "The food is exceptionally good, the steak was cooked to perfection and the desserts are delicious! You would not be disappointed eating here."
-              }
-              name={"Carmen Buhagiar"}
-              platform={"Tripadvisor"}
+            <AliceCarousel
+              mouseTracking
+              items={items}
+              responsive={responsive}
+              disableButtonsControls={true}
+              autoPlay={true}
+              autoPlayInterval={7500}
+              infinite={true}
             />
           </section>
         </div>
