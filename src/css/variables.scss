@@ -1,0 +1,34 @@
+// Main colors
+$white: #fff;
+$black: #202020;
+$grey: #616161;
+// $primary: ;
+$white-text: rgba(
+  $color: $white,
+  $alpha: 0.9,
+);
+
+// Sections
+$bg-color: $white;
+
+// Text
+$heading-color: $black;
+$text-color: $grey;
+$font: "Poppins", sans-serif;
+
+// Mixins
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1350px;
+}

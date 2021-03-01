@@ -1,0 +1,89 @@
+@import "./variables.scss";
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: $font;
+}
+
+p {
+  color: $text-color;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $heading-color;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+button,
+svg {
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  color: $text-color;
+}
+
+button {
+  font-family: $font;
+  cursor: pointer;
+  outline: none;
+}

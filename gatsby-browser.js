@@ -1,7 +1,14 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import React from "react"
+import Layout from "./src/components/Layout/Layout"
+import "@fontsource/poppins/400.css"
+import "@fontsource/poppins/400-italic.css"
+import "./src/css/normalize.scss"
+import "./src/css/global.scss"
 
-// You can delete this file if you're not using it
+export const wrapPageElement = ({ element, props }) => {
+  return (
+    <Layout {...props} location={props.location}>
+      {element}
+    </Layout>
+  )
+}
