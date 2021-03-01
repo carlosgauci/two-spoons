@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { HiMenu } from "react-icons/hi"
 import styles from "./Header.module.scss"
 
-const Header = () => {
+const Header = ({ navOpen, setNavOpen }) => {
   const { logo } = useStaticQuery(query)
   return (
     <header className={styles.header}>
@@ -16,7 +16,7 @@ const Header = () => {
           />
         </Link>
         <div className={styles.icon}>
-          <HiMenu />
+          <HiMenu onClick={() => setNavOpen(!navOpen)} />
         </div>
       </section>
     </header>
