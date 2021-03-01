@@ -1,5 +1,12 @@
 @import "../../css/variables.scss";
 
+.header {
+  height: $header-height;
+  background-color: $bg-color;
+  @include flex-col;
+  justify-content: center;
+}
+
 .container {
   @include section-center;
   padding-top: 1rem;

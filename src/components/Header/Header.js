@@ -7,7 +7,7 @@ import styles from "./Header.module.scss"
 const Header = () => {
   const { logo } = useStaticQuery(query)
   return (
-    <header>
+    <header className={styles.header}>
       <section className={styles.container}>
         <Link to="/">
           <Img fixed={logo.childImageSharp.fixed} />
@@ -24,7 +24,7 @@ const query = graphql`
   query Logo {
     logo: file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
-        fixed(width: 200, quality: 90) {
+        fixed(width: 150, quality: 90) {
           ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
