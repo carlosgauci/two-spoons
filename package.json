@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@browniebroke/gatsby-image-gallery": "^4.0.2",
     "@fontsource/poppins": "^4.2.1",
     "@react-google-maps/api": "^2.1.1",
     "gatsby": "^2.32.8",

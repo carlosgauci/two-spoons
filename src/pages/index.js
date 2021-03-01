@@ -5,6 +5,7 @@ import About from "../components/About/About"
 import Reviews from "../components/Reviews/Reviews"
 import OpeningHours from "../components/OpeningHours/OpeningHours"
 import FindUs from "../components/FindUs/FindUs"
+import ImageGallery from "../components/ImageGallery/ImageGallery"
 
 const IndexPage = () => (
   <>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <Reviews />
     <OpeningHours />
     <FindUs />
+    <ImageGallery />
   </>
 )
 

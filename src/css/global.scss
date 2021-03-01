@@ -90,6 +90,14 @@ button {
   outline: none;
 }
 
+// Alice carousel
 .alice-carousel__dots {
   margin: 0 !important;
+}
+
+@media only screen and (min-width: 576px) {
+  // gatsby-image-gallery
+  .eMREFo {
+    flex-basis: 16.6666% !important;
+  }
 }
