@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import styles from "./Reviews.module.scss"
 
-import styles from "./Hero.module.scss"
-
-const Hero = () => {
+const Reviews = () => {
   const { mobile, desktop } = useStaticQuery(query)
 
   const images = [
@@ -14,27 +13,21 @@ const Hero = () => {
       media: `(min-width: 768px)`,
     },
   ]
-
   return (
     <BackgroundImage
       Tag="section"
-      className={styles.hero}
+      className={styles.reviews}
       fluid={images}
       backgroundColor={`#fff`}
     >
       <div className={styles.overlay}>
         <div className={styles.container}>
           <section className={styles.text}>
-            <h1>Delicious Mediterranean food, made with love.</h1>
-            <h4>Online ordering now available!</h4>
-            <p>
-              Order online & collect, or get it delivered through the Bolt Food
-              app.
-            </p>
-            <section className={styles.buttons}>
-              <button>MENU</button>
-              <button>BOOK TABLE</button>
-            </section>
+            <h2>
+              What our
+              <br />
+              customers say..
+            </h2>
           </section>
         </div>
       </div>
@@ -44,7 +37,7 @@ const Hero = () => {
 
 const query = graphql`
   {
-    mobile: file(relativePath: { eq: "hero.jpg" }) {
+    mobile: file(relativePath: { eq: "customers.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 562) {
           ...GatsbyImageSharpFluid_withWebp
@@ -52,7 +45,7 @@ const query = graphql`
       }
     }
 
-    desktop: file(relativePath: { eq: "hero-lg.jpg" }) {
+    desktop: file(relativePath: { eq: "customers-lg.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
@@ -62,4 +55,4 @@ const query = graphql`
   }
 `
 
-export default Hero
+export default Reviews

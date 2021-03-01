@@ -1,0 +1,25 @@
+@import "../../css/variables.scss";
+
+.reviews {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba($color: #8c3b2d, $alpha: 0.9);
+}
+
+.container {
+  @include section-center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.text {
+  h2 {
+    text-align: center;
+    color: $white-text;
+  }
+}
