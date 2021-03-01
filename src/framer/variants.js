@@ -15,3 +15,14 @@ export const navVariants = {
     transition: { duration: 0.25 },
   },
 }
+
+export const navItemVariants = {
+  hidden: {
+    opacity: 0,
+    x: 50,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+  },
+}

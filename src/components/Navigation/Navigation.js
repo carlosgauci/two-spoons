@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { navVariants } from "../../framer/variants"
+import { navVariants, navItemVariants } from "../../framer/variants"
 import { IoClose } from "react-icons/io5"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "./Navigation.module.scss"
@@ -17,21 +17,49 @@ const Navigation = ({ setNavOpen }) => {
       <section className={styles.container}>
         <IoClose className={styles.close} onClick={() => setNavOpen(false)} />
         <ul>
-          <li>Menu</li>
-          <li>Reserve Table</li>
+          <motion.li
+            variants={navItemVariants}
+            initial="hidden"
+            animate="show"
+            transition={{ duration: 0.4, delay: 0.1 }}
+          >
+            Menu
+          </motion.li>
+          <motion.li
+            variants={navItemVariants}
+            initial="hidden"
+            animate="show"
+            transition={{ duration: 0.4, delay: 0.2 }}
+          >
+            Reserve Table
+          </motion.li>
           <AnchorLink
             to="/#about"
             title="About Us"
             onAnchorLinkClick={() => setNavOpen(false)}
           >
-            <li>About Us</li>
+            <motion.li
+              variants={navItemVariants}
+              initial="hidden"
+              animate="show"
+              transition={{ duration: 0.4, delay: 0.3 }}
+            >
+              About Us
+            </motion.li>
           </AnchorLink>
           <AnchorLink
             to="/#contact"
             title="Our team"
             onAnchorLinkClick={() => setNavOpen(false)}
           >
-            <li>Contact</li>
+            <motion.li
+              variants={navItemVariants}
+              initial="hidden"
+              animate="show"
+              transition={{ duration: 0.4, delay: 0.4 }}
+            >
+              Contact
+            </motion.li>
           </AnchorLink>
         </ul>
       </section>

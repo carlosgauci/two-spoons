@@ -33,7 +33,7 @@ const Hero = () => {
             </p>
             <section className={styles.buttons}>
               <button>MENU</button>
-              <button>BOOK TABLE</button>
+              <button>RESERVE</button>
             </section>
           </section>
         </div>
