@@ -19,3 +19,38 @@
 .icon {
   font-size: 2rem;
 }
+
+.navigation {
+  display: none;
+}
+
+@media only screen and (min-width: 568px) {
+  .header {
+    height: $header-height-lg;
+  }
+
+  .container {
+    height: 100%;
+    @include flex-col;
+    // justify-content: center;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+    margin-top: 1rem;
+
+    ul {
+      @include flex-row;
+
+      li {
+        margin: 0 1.25rem;
+        color: $heading-color;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

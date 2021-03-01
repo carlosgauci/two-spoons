@@ -1,23 +1,47 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import useWindowSize from "../../utils/useWindowSize"
 import { HiMenu } from "react-icons/hi"
 import styles from "./Header.module.scss"
 
 const Header = ({ navOpen, setNavOpen }) => {
+  const width = useWindowSize()
+
   const { logo } = useStaticQuery(query)
   return (
     <header className={styles.header}>
       <section className={styles.container}>
         <Link to="/">
-          <Img
-            fixed={logo.childImageSharp.fixed}
-            imgStyle={{ objectFit: "contain" }}
-          />
+          {width < 568 && (
+            <Img
+              fixed={logo.childImageSharp.small}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          )}
+          {width >= 568 && (
+            <Img
+              fixed={logo.childImageSharp.large}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          )}
         </Link>
         <div className={styles.icon}>
           <HiMenu onClick={() => setNavOpen(!navOpen)} />
         </div>
+        <nav className={styles.navigation}>
+          <ul>
+            <li>Menu</li>
+            <li>Reserve Table</li>
+            <AnchorLink to="/#about" title="About Us">
+              <li>About Us</li>
+            </AnchorLink>
+            <AnchorLink to="/#contact" title="Contact Us">
+              <li>Contact Us</li>
+            </AnchorLink>
+          </ul>
+        </nav>
       </section>
     </header>
   )
@@ -27,7 +51,10 @@ const query = graphql`
   query Logo {
     logo: file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
-        fixed(width: 150, quality: 90) {
+        small: fixed(width: 150, quality: 90) {
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+        }
+        large: fixed(width: 200, quality: 90) {
           ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }

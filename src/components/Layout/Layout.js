@@ -6,7 +6,7 @@ import Navigation from "../Navigation/Navigation"
 import Footer from "../Footer/Footer"
 
 const Layout = ({ children }) => {
-  const [navOpen, setNavOpen] = useState(true)
+  const [navOpen, setNavOpen] = useState(false)
 
   // Disable scrolling when nav is open
   let html
