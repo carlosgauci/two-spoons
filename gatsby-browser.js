@@ -13,16 +13,3 @@ export const wrapPageElement = ({ element, props }) => {
     </Layout>
   )
 }
-
-const addScript = url => {
-  const script = document.createElement("script")
-  script.src = url
-  script.async = true
-  document.body.appendChild(script)
-}
-
-export const onClientEntry = () => {
-  window.onload = () => {
-    addScript("https://www.fbgcdn.com/embedder/js/ewm2.js")
-  }
-}

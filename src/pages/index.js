@@ -8,7 +8,7 @@ import ImageGallery from "../components/ImageGallery/ImageGallery"
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <SEO title="Two Spoons Cafe" />
 
     <Hero />
     <About />

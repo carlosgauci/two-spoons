@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Two Spoons Cafe`,
+    description: `Delicious Mediterranean food in the heart of Birkirkara, Malta.`,
+    url: `https://twospoonsmalta.com/`,
+    image: `site-img.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,20 +19,17 @@ module.exports = {
     `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-anchor-links",
-      // options: {
-      //   offset: -100
-      // }
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `two-spoons`,
+        short_name: `twospoons`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#202020`,
+        theme_color: `#202020`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/fav.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
