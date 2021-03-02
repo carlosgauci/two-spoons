@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
-import { AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import { pageVariants } from "../../framer/variants"
 import PropTypes from "prop-types"
 import Header from "../Header/Header"
 import Navigation from "../Navigation/Navigation"
 import Footer from "../Footer/Footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const [navOpen, setNavOpen] = useState(false)
 
   // Disable scrolling when nav is open
@@ -21,12 +22,20 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header navOpen={navOpen} setNavOpen={setNavOpen} />
       <AnimatePresence>
-        {navOpen && <Navigation setNavOpen={setNavOpen} />}
+        <motion.div
+          key={location.pathname}
+          variants={pageVariants}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
+          <Header navOpen={navOpen} setNavOpen={setNavOpen} />
+          {navOpen && <Navigation setNavOpen={setNavOpen} />}
+          <main>{children}</main>
+          <Footer />
+        </motion.div>
       </AnimatePresence>
-      <main>{children}</main>
-      <Footer />
     </>
   )
 }

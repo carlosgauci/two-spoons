@@ -17,22 +17,34 @@ const Navigation = ({ setNavOpen }) => {
       <section className={styles.container}>
         <IoClose className={styles.close} onClick={() => setNavOpen(false)} />
         <ul>
-          <motion.li
-            variants={navItemVariants}
-            initial="hidden"
-            animate="show"
-            transition={{ duration: 0.4, delay: 0.1 }}
+          <a
+            href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6"
+            target="blank"
           >
-            Menu
-          </motion.li>
-          <motion.li
-            variants={navItemVariants}
-            initial="hidden"
-            animate="show"
-            transition={{ duration: 0.4, delay: 0.2 }}
+            <motion.li
+              variants={navItemVariants}
+              initial="hidden"
+              animate="show"
+              transition={{ duration: 0.4, delay: 0.1 }}
+              onClick={() => setNavOpen(false)}
+            >
+              Menu
+            </motion.li>
+          </a>
+          <a
+            href="https://www.foodbooking.com/ordering/restaurant/menu/reservation?restaurant_uid=f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6&reservation=true"
+            target="blank"
           >
-            Reserve Table
-          </motion.li>
+            <motion.li
+              variants={navItemVariants}
+              initial="hidden"
+              animate="show"
+              transition={{ duration: 0.4, delay: 0.2 }}
+              onClick={() => setNavOpen(false)}
+            >
+              Reserve Table
+            </motion.li>
+          </a>
           <AnchorLink
             to="/#about"
             title="About Us"
