@@ -32,8 +32,19 @@ const Hero = () => {
               app.
             </p>
             <section className={styles.buttons}>
-              <button>MENU</button>
-              <button>RESERVE</button>
+              <button
+                data-glf-cuid="bb8c1dad-7535-46f5-889e-f6917d4856e8"
+                data-glf-ruid="f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6"
+              >
+                MENU
+              </button>
+              <button
+                data-glf-cuid="bb8c1dad-7535-46f5-889e-f6917d4856e8"
+                data-glf-ruid="f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6"
+                data-glf-reservation="true"
+              >
+                RESERVE
+              </button>
             </section>
           </section>
         </div>

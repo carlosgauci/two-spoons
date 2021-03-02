@@ -121,6 +121,15 @@
   .rosemary {
     width: 300px;
   }
+
+  .imageContainer {
+    transform: translate(30px, -30px);
+  }
+
+  .image {
+    border-radius: 10px;
+    transform: translate(-40px, 40px);
+  }
 }
 
 @media only screen and (min-width: 1536px) {

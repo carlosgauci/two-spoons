@@ -27,7 +27,6 @@ const Reviews = () => {
   //   Carousel responsive settings
   const responsive = {
     0: { items: 1 },
-    768: { items: 1 },
     1024: { items: 2 },
   }
 
