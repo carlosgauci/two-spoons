@@ -46,3 +46,41 @@ export const navItemVariants = {
     x: 0,
   },
 }
+
+export const overlayVariants = {
+  hidden: {
+    backgroundColor: "rgba(0,0,0,0)",
+  },
+  show: {
+    backgroundColor: "rgba(0,0,0,0.4)",
+    transition: {
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+}
+
+export const heroVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+  },
+
+  hiddenButtonLeft: {
+    opacity: 0,
+  },
+  showButtonLeft: {
+    opacity: 1,
+  },
+
+  hiddenButtonRight: {
+    opacity: 0,
+    x: -110,
+  },
+  showButtonRight: {
+    opacity: 1,
+    x: 0,
+  },
+}

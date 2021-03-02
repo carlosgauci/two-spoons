@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { motion } from "framer-motion"
+import { overlayVariants, heroVariants } from "../../framer/variants"
 import BackgroundImage from "gatsby-background-image"
 
 import styles from "./Hero.module.scss"
@@ -22,33 +24,65 @@ const Hero = () => {
       fluid={images}
       backgroundColor={`#fff`}
     >
-      <div className={styles.overlay}>
+      <motion.div
+        className={styles.overlay}
+        variants={overlayVariants}
+        initial="hidden"
+        animate="show"
+      >
         <div className={styles.container}>
           <section className={styles.text}>
-            <h1>Delicious Mediterranean food, made with love.</h1>
-            <h4>Online ordering now available!</h4>
-            <p>
+            <motion.h1
+              variants={heroVariants}
+              initial="hidden"
+              animate="show"
+              transition={{ duration: 1, delay: 0.6 }}
+            >
+              Delicious Mediterranean food, made with love.
+            </motion.h1>
+            <motion.h4
+              variants={heroVariants}
+              initial="hidden"
+              animate="show"
+              transition={{ duration: 1, delay: 1 }}
+            >
+              Online ordering now available.
+            </motion.h4>
+            <motion.p
+              variants={heroVariants}
+              initial="hidden"
+              animate="show"
+              transition={{ duration: 1, delay: 1.4 }}
+            >
               Order online & collect, or get it delivered through the Bolt Food
               app.
-            </p>
+            </motion.p>
             <section className={styles.buttons}>
-              <button
+              <motion.button
                 data-glf-cuid="bb8c1dad-7535-46f5-889e-f6917d4856e8"
                 data-glf-ruid="f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6"
+                variants={heroVariants}
+                initial="hiddenButtonLeft"
+                animate="showButtonLeft"
+                transition={{ duration: 1, delay: 1.8 }}
               >
                 MENU
-              </button>
-              <button
+              </motion.button>
+              <motion.button
+                variants={heroVariants}
+                initial="hiddenButtonRight"
+                animate="showButtonRight"
+                transition={{ duration: 1, delay: 2.2 }}
                 data-glf-cuid="bb8c1dad-7535-46f5-889e-f6917d4856e8"
                 data-glf-ruid="f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6"
                 data-glf-reservation="true"
               >
                 RESERVE
-              </button>
+              </motion.button>
             </section>
           </section>
         </div>
-      </div>
+      </motion.div>
     </BackgroundImage>
   )
 }
