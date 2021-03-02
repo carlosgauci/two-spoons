@@ -40,7 +40,7 @@
 
   .navigation {
     display: block;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     ul {
       @include flex-row;
@@ -49,6 +49,17 @@
         margin: 0 1.25rem;
         color: $heading-color;
         font-size: 0.9rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navigation {
+    ul {
+      li {
+        margin: 0 2rem;
       }
     }
   }
