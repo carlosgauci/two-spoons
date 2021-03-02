@@ -1,20 +1,33 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import useWindowSize from "../../utils/useWindowSize"
 import pattern from "../../images/pattern.png"
 import styles from "./About.module.scss"
 
 const About = () => {
-  const { about, mint } = useStaticQuery(query)
+  const { about, mint, rosemary } = useStaticQuery(query)
+  const width = useWindowSize()
 
   return (
     <section className={styles.about} id="about">
       <div className={styles.container}>
-        <Img
-          fixed={mint.childImageSharp.fixed}
-          className={styles.mint}
-          style={{ position: "absolute" }}
-        />
+        {(width < 768 || width >= 1024) && (
+          <Img
+            fluid={mint.childImageSharp.fluid}
+            className={styles.mint}
+            style={{ position: "absolute" }}
+          />
+        )}
+
+        {width >= 1024 && (
+          <Img
+            fluid={rosemary.childImageSharp.fluid}
+            className={styles.rosemary}
+            style={{ position: "absolute" }}
+          />
+        )}
+
         <section className={styles.text}>
           <h2>About Us</h2>
           <p>
@@ -58,8 +71,15 @@ const query = graphql`
     }
     mint: file(relativePath: { eq: "mint.png" }) {
       childImageSharp {
-        fixed(width: 175, quality: 90) {
-          ...GatsbyImageSharpFixed_withWebp
+        fluid(maxWidth: 450, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    rosemary: file(relativePath: { eq: "rosemary.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 450, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
