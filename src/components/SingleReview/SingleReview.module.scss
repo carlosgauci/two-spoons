@@ -1,6 +1,8 @@
 @import "../../css/variables.scss";
 
 .review {
+  max-width: 500px;
+  margin: 0 auto;
   p,
   h4 {
     color: $white-text;
@@ -23,5 +25,17 @@
   svg {
     color: gold;
     font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .review {
+    @include flex-col;
+    padding: 0 2rem;
+    height: 100%;
+
+    p:first-of-type {
+      flex: 1;
+    }
   }
 }

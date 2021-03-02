@@ -13,17 +13,19 @@
 
 .hours {
   @include flex-col;
-  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .date {
-  @include flex-row;
-  width: 15rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
   margin-bottom: 0.25rem;
-
-  p {
-    width: 50%;
-  }
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid rgba($color: $black, $alpha: 0.05);
+}
+.date:last-of-type {
+  border-bottom: none;
 }
 
 .book {
@@ -61,5 +63,42 @@
   svg {
     margin-right: 0.5rem;
     font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .opening {
+    width: 50%;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 5rem 0;
+  }
+
+  .book {
+    button:after {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .date {
+    // width: 18rem;
+
+    p {
+      // width: 50%;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    h2 {
+      font-size: 2.5rem;
+    }
   }
 }

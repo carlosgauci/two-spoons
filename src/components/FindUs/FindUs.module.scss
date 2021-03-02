@@ -16,3 +16,26 @@
   border-radius: 10px;
   overflow: hidden;
 }
+
+@media only screen and (min-width: 768px) {
+  .findus {
+    width: 50%;
+  }
+  .map {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 100%;
+    padding: 5rem 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+}

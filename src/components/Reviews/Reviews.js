@@ -27,8 +27,8 @@ const Reviews = () => {
   //   Carousel responsive settings
   const responsive = {
     0: { items: 1 },
-    768: { items: 2 },
-    1024: { items: 3 },
+    768: { items: 1 },
+    1024: { items: 2 },
   }
 
   return (
@@ -44,7 +44,7 @@ const Reviews = () => {
             <h2>
               What our
               <br />
-              customers say..
+              customers say...
             </h2>
             <AliceCarousel
               mouseTracking

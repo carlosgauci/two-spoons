@@ -3,8 +3,7 @@ import SEO from "../components/SEO/SEO"
 import Hero from "../components/Hero/Hero"
 import About from "../components/About/About"
 import Reviews from "../components/Reviews/Reviews"
-import OpeningHours from "../components/OpeningHours/OpeningHours"
-import FindUs from "../components/FindUs/FindUs"
+import Contact from "../components/Contact/Contact"
 import ImageGallery from "../components/ImageGallery/ImageGallery"
 
 const IndexPage = () => (
@@ -14,8 +13,7 @@ const IndexPage = () => (
     <Hero />
     <About />
     <Reviews />
-    <OpeningHours />
-    <FindUs />
+    <Contact />
     <ImageGallery />
   </>
 )

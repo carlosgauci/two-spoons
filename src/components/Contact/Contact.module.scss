@@ -1,0 +1,9 @@
+@import "../../css/variables.scss";
+
+@media only screen and (min-width: 768px) {
+  .contact {
+    @include section-center;
+    @include flex-row;
+    overflow: hidden;
+  }
+}
