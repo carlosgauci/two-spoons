@@ -14,18 +14,17 @@ const Header = ({ navOpen, setNavOpen }) => {
     <header className={styles.header}>
       <section className={styles.container}>
         <Link to="/">
-          {width < 568 && (
-            <Img
-              fixed={logo.childImageSharp.small}
-              imgStyle={{ objectFit: "contain" }}
-            />
-          )}
-          {width >= 568 && (
+          <Img
+            fixed={logo.childImageSharp.small}
+            imgStyle={{ objectFit: "contain" }}
+          />
+
+          {/* {width >= 568 && (
             <Img
               fixed={logo.childImageSharp.large}
               imgStyle={{ objectFit: "contain" }}
             />
-          )}
+          )} */}
         </Link>
         <div className={styles.icon}>
           <HiMenu onClick={() => setNavOpen(!navOpen)} />
@@ -62,7 +61,7 @@ const query = graphql`
   query Logo {
     logo: file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
-        small: fixed(width: 150, quality: 90) {
+        small: fixed(width: 120, quality: 90) {
           ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
         large: fixed(width: 200, quality: 90) {

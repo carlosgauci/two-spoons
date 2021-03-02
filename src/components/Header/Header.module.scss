@@ -1,16 +1,19 @@
 @import "../../css/variables.scss";
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: $header-height;
-  background-color: $bg-color;
+  background-color: rgba($color: $black, $alpha: 0.6);
   @include flex-col;
   justify-content: center;
+  z-index: 999;
 }
 
 .container {
   @include section-center;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
   @include flex-row;
   justify-content: space-between;
   align-items: center;
@@ -18,20 +21,22 @@
 
 .icon {
   font-size: 2rem;
+  color: $white-text;
 }
 
 .navigation {
   display: none;
 }
 
-@media only screen and (min-width: 568px) {
+@media only screen and (min-width: 768px) {
   .header {
-    height: $header-height-lg;
+    height: $header-height;
   }
 
   .container {
     height: 100%;
-    @include flex-col;
+    @include flex-row;
+    align-content: center;
   }
 
   .icon {
@@ -40,27 +45,16 @@
 
   .navigation {
     display: block;
-    margin-top: 2rem;
 
     ul {
       @include flex-row;
 
       li {
-        margin: 0 1.25rem;
-        color: $heading-color;
-        font-size: 0.9rem;
-        font-weight: 600;
-        cursor: pointer;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .navigation {
-    ul {
-      li {
         margin: 0 2rem;
+        color: $white-text;
+        font-size: 1rem;
+        // font-weight: 600;
+        cursor: pointer;
       }
     }
   }

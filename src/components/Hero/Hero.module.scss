@@ -1,17 +1,18 @@
 @import "../../css/variables.scss";
 
 .hero {
-  min-height: calc(100vh - #{$header-height});
+  min-height: 100vh;
   height: 100%;
 }
 
 .overlay {
-  min-height: calc(100vh - #{$header-height});
+  min-height: 100vh;
   height: 100%;
   width: 100%;
   background-color: rgba($color: #000, $alpha: 0);
   @include flex-row;
   align-items: center;
+  padding-top: $header-height;
 }
 
 .container {
@@ -43,14 +44,6 @@
 }
 
 @media only screen and (min-width: 568px) {
-  .hero {
-    min-height: calc(100vh - #{$header-height-lg});
-  }
-
-  .overlay {
-    min-height: calc(100vh - #{$header-height-lg});
-  }
-
   .text {
     max-width: 400px;
   }
