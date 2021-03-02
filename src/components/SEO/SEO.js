@@ -36,11 +36,6 @@ const SEO = ({ title, description, image, article, index }) => {
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
-      <script
-        src="https://www.fbgcdn.com/embedder/js/ewm2.js"
-        defer
-        async
-      ></script>
     </Helmet>
   )
 }
