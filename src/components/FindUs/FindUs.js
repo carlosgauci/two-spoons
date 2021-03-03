@@ -1,15 +1,19 @@
 import React from "react"
 import GoogleMaps from "../GoogleMaps/GoogleMaps"
+import { useInView } from "react-intersection-observer"
 import styles from "./FindUs.module.scss"
 
 const FindUs = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  })
+
   return (
-    <section className={styles.findus}>
+    <section className={styles.findus} ref={ref}>
       <div className={styles.container}>
         <h2>Find Us</h2>
-        <div className={styles.map}>
-          <GoogleMaps />
-        </div>
+        <div className={styles.map}>{inView && <GoogleMaps />}</div>
       </div>
     </section>
   )

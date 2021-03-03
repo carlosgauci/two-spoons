@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Gallery from "@browniebroke/gatsby-image-gallery"
+import { useInView } from "react-intersection-observer"
 import "@browniebroke/gatsby-image-gallery/dist/style.css"
 import styles from "./ImageGallery.module.scss"
 
@@ -12,9 +13,14 @@ const ImageGallery = () => {
     reactModalProps: { shouldReturnFocusAfterClose: false },
   }
 
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  })
+
   return (
-    <section className={styles.gallery}>
-      <Gallery images={images} lightboxOptions={lightboxOptions} />
+    <section className={styles.gallery} ref={ref}>
+      {inView && <Gallery images={images} lightboxOptions={lightboxOptions} />}
     </section>
   )
 }

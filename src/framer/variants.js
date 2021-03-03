@@ -31,6 +31,7 @@ export const navVariants = {
     },
   },
   exit: {
+    opacity: 0,
     x: 768,
     transition: { duration: 0.25 },
   },

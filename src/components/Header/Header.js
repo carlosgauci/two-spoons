@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import useWindowSize from "../../utils/useWindowSize"
-import { HiMenu } from "react-icons/hi"
+import { FaBars } from "react-icons/fa"
 import styles from "./Header.module.scss"
 
 const Header = ({ navOpen, setNavOpen }) => {
@@ -18,16 +18,9 @@ const Header = ({ navOpen, setNavOpen }) => {
             fixed={logo.childImageSharp.small}
             imgStyle={{ objectFit: "contain" }}
           />
-
-          {/* {width >= 568 && (
-            <Img
-              fixed={logo.childImageSharp.large}
-              imgStyle={{ objectFit: "contain" }}
-            />
-          )} */}
         </Link>
         <div className={styles.icon}>
-          <HiMenu onClick={() => setNavOpen(!navOpen)} />
+          <FaBars onClick={() => setNavOpen(!navOpen)} />
         </div>
         <nav className={styles.navigation}>
           <ul>

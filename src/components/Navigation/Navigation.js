@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { navVariants, navItemVariants } from "../../framer/variants"
-import { IoClose } from "react-icons/io5"
+import { FaAngleDoubleRight } from "react-icons/fa"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "./Navigation.module.scss"
 
@@ -15,7 +15,10 @@ const Navigation = ({ setNavOpen }) => {
       exit="exit"
     >
       <section className={styles.container}>
-        <IoClose className={styles.close} onClick={() => setNavOpen(false)} />
+        <FaAngleDoubleRight
+          className={styles.close}
+          onClick={() => setNavOpen(false)}
+        />
         <ul>
           <a
             href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6"
