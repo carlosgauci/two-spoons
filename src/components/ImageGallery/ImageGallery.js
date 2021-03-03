@@ -13,8 +13,9 @@ const ImageGallery = () => {
     reactModalProps: { shouldReturnFocusAfterClose: false },
   }
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0,
+    rootMargin: "300px",
     triggerOnce: true,
   })
 

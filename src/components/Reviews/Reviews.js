@@ -11,8 +11,9 @@ import styles from "./Reviews.module.scss"
 const Reviews = () => {
   const { mobile, desktop } = useStaticQuery(query)
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0,
+    rootMargin: "300px",
     triggerOnce: true,
   })
 

@@ -4,8 +4,9 @@ import { useInView } from "react-intersection-observer"
 import styles from "./FindUs.module.scss"
 
 const FindUs = () => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0,
+    rootMargin: "300px",
     triggerOnce: true,
   })
 
