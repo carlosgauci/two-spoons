@@ -14,6 +14,7 @@ export const wrapPageElement = ({ element, props }) => {
   )
 }
 
+// Add foodbooking script
 const addScript = url => {
   const script = document.createElement("script")
   script.src = url

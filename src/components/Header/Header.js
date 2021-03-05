@@ -2,13 +2,10 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import useWindowSize from "../../utils/useWindowSize"
 import { FaBars } from "react-icons/fa"
 import styles from "./Header.module.scss"
 
 const Header = ({ navOpen, setNavOpen }) => {
-  const width = useWindowSize()
-
   const { logo } = useStaticQuery(query)
   return (
     <header className={styles.header}>

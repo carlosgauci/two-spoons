@@ -95,9 +95,13 @@ button {
   margin: 0 !important;
 }
 
+// Gatsby-image-gallery
+.sc-gsTCUz {
+  flex-basis: 25% !important;
+}
+
 @media only screen and (min-width: 576px) {
-  // Gatsby-image-gallery
   .sc-gsTCUz {
-    flex-basis: 16.6666% !important;
+    flex-basis: 12.5% !important;
   }
 }
