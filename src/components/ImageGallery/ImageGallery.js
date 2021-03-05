@@ -32,10 +32,10 @@ const query = graphql`
       edges {
         node {
           childImageSharp {
-            thumb: fluid(maxWidth: 350, maxHeight: 350) {
+            thumb: fluid(maxWidth: 300, maxHeight: 300) {
               ...GatsbyImageSharpFluid_withWebp
             }
-            full: fluid(maxWidth: 1024) {
+            full: fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

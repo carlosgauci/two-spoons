@@ -1,5 +1,5 @@
 // Page transition
-const duration = 0.5
+const duration = 0.25
 export const pageVariants = {
   initial: {
     opacity: 0,

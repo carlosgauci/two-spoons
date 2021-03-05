@@ -23,6 +23,7 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <AnimatePresence>
+        {navOpen && <Navigation setNavOpen={setNavOpen} />}
         <motion.div
           key={location.pathname}
           variants={pageVariants}
@@ -31,7 +32,6 @@ const Layout = ({ children, location }) => {
           exit="exit"
         >
           <Header navOpen={navOpen} setNavOpen={setNavOpen} />
-          {navOpen && <Navigation setNavOpen={setNavOpen} />}
           <main>{children}</main>
           <Footer />
         </motion.div>
