@@ -8,6 +8,7 @@
 .overlay {
   width: 100%;
   background-color: rgba($color: #8c3b2d, $alpha: 0.9);
+  min-height: 500px;
 }
 
 .container {
@@ -24,7 +25,8 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .reviews {
+  .reviews,
+  .overlay {
     min-height: 580px;
   }
 
@@ -40,7 +42,8 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .reviews {
+  .reviews,
+  .overlay {
     min-height: 660px;
   }
   .text {
