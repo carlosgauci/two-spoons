@@ -6,7 +6,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { FaBars } from "react-icons/fa"
 import styles from "./Header.module.scss"
 
-const Header = ({ navOpen, setNavOpen }) => {
+const Header = ({ navOpen, setNavOpen, location }) => {
   const { logo } = useStaticQuery(query)
 
   // Framer motion
@@ -19,7 +19,10 @@ const Header = ({ navOpen, setNavOpen }) => {
   return (
     <motion.header
       className={styles.header}
-      style={{ backgroundColor: headerColor }}
+      style={{
+        backgroundColor:
+          location.pathname === "/" ? headerColor : "rgba(0,0,0,0.6",
+      }}
     >
       <section className={styles.container}>
         <Link to="/">

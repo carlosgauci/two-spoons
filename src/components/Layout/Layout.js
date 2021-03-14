@@ -30,9 +30,18 @@ const Layout = ({ children, location }) => {
           initial="initial"
           animate="enter"
           exit="exit"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
+          }}
         >
-          <Header navOpen={navOpen} setNavOpen={setNavOpen} />
-          <main>{children}</main>
+          <Header
+            navOpen={navOpen}
+            setNavOpen={setNavOpen}
+            location={location}
+          />
+          <main style={{ flex: 1 }}>{children}</main>
           <Footer />
         </motion.div>
       </AnimatePresence>
