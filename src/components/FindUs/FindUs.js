@@ -6,7 +6,7 @@ import styles from "./FindUs.module.scss"
 const FindUs = () => {
   const { ref, inView } = useInView({
     threshold: 0,
-    rootMargin: "300px",
+    rootMargin: "500px",
     triggerOnce: true,
   })
 
