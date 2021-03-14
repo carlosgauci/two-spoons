@@ -40,22 +40,22 @@ const Hero = () => {
             >
               Delicious Mediterranean food, made with love.
             </motion.h1>
-            <motion.h4
+            {/* <motion.h4
               variants={heroVariants}
               initial="hidden"
               animate="show"
               transition={{ duration: 1, delay: 1 }}
             >
-              Online ordering now available.
-            </motion.h4>
+              Online reservations and ordering now accepted!
+            </motion.h4> */}
             <motion.p
               variants={heroVariants}
               initial="hidden"
               animate="show"
-              transition={{ duration: 1, delay: 1.4 }}
+              transition={{ duration: 1, delay: 1 }}
             >
-              Order online & collect, or get it delivered through the Bolt Food
-              app.
+              Order your food online & collect it from our restaurant, or get it
+              delivered through the Bolt Food app.
             </motion.p>
             <section className={styles.buttons}>
               <motion.button
@@ -64,7 +64,7 @@ const Hero = () => {
                 variants={heroVariants}
                 initial="hiddenButtonLeft"
                 animate="showButtonLeft"
-                transition={{ duration: 1, delay: 1.8 }}
+                transition={{ duration: 1, delay: 1.4 }}
               >
                 MENU
               </motion.button>
@@ -72,7 +72,7 @@ const Hero = () => {
                 variants={heroVariants}
                 initial="hiddenButtonRight"
                 animate="showButtonRight"
-                transition={{ duration: 1, delay: 2.2 }}
+                transition={{ duration: 0.75, delay: 1.8 }}
                 data-glf-cuid="bb8c1dad-7535-46f5-889e-f6917d4856e8"
                 data-glf-ruid="f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6"
                 data-glf-reservation="true"
