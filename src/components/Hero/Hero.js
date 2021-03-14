@@ -40,14 +40,6 @@ const Hero = () => {
             >
               Delicious Mediterranean food, made with love.
             </motion.h1>
-            {/* <motion.h4
-              variants={heroVariants}
-              initial="hidden"
-              animate="show"
-              transition={{ duration: 1, delay: 1 }}
-            >
-              Online reservations and ordering now accepted!
-            </motion.h4> */}
             <motion.p
               variants={heroVariants}
               initial="hidden"

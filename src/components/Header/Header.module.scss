@@ -1,15 +1,15 @@
 @import "../../css/variables.scss";
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: $header-height;
-  background-color: transparent;
   @include flex-col;
   justify-content: center;
   z-index: 998;
+  transition: all 0.5s linear;
 }
 
 .container {

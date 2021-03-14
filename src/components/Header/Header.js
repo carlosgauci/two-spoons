@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { motion, useViewportScroll, useTransform } from "framer-motion"
 import Img from "gatsby-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { FaBars } from "react-icons/fa"
@@ -7,8 +8,19 @@ import styles from "./Header.module.scss"
 
 const Header = ({ navOpen, setNavOpen }) => {
   const { logo } = useStaticQuery(query)
+
+  // Framer motion
+  const { scrollY } = useViewportScroll()
+  const headerColor = useTransform(
+    scrollY,
+    [0, 1],
+    ["rbga(0,0,0,0)", "rgba(0,0,0,0.6"]
+  )
   return (
-    <header className={styles.header}>
+    <motion.header
+      className={styles.header}
+      style={{ backgroundColor: headerColor }}
+    >
       <section className={styles.container}>
         <Link to="/">
           <Img
@@ -43,7 +55,7 @@ const Header = ({ navOpen, setNavOpen }) => {
           </ul>
         </nav>
       </section>
-    </header>
+    </motion.header>
   )
 }
 
