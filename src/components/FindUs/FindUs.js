@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer"
 import styles from "./FindUs.module.scss"
 
 const FindUs = () => {
+  // Load google maps with intersection observer
   const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "500px",

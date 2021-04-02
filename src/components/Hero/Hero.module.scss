@@ -1,9 +1,11 @@
 @import "../../css/variables.scss";
 
+// Hero container
 .hero {
   min-height: 100vh;
 }
 
+// Overlay to dim hero image
 .overlay {
   min-height: 100vh;
   height: 100%;
@@ -14,10 +16,12 @@
   padding-top: $header-height;
 }
 
+// Inner centered container
 .container {
   @include section-center;
 }
 
+// Text section container
 .text {
   max-width: 280px;
   h1,
@@ -27,6 +31,7 @@
     margin-bottom: 1.25rem;
   }
 
+  // Menu and Reserve buttons
   button {
     width: 8rem;
     height: 3rem;

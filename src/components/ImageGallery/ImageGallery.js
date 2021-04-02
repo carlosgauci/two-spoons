@@ -6,13 +6,14 @@ import "@browniebroke/gatsby-image-gallery/dist/style.css"
 import styles from "./ImageGallery.module.scss"
 
 const ImageGallery = () => {
+  // Get gallery images and set lightbox options
   const { allFile } = useStaticQuery(query)
-
   const images = allFile.edges.map(({ node }) => node.childImageSharp)
   const lightboxOptions = {
     reactModalProps: { shouldReturnFocusAfterClose: false },
   }
 
+  // Load image gallery with intersection oberserver
   const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "500px",
@@ -26,6 +27,7 @@ const ImageGallery = () => {
   )
 }
 
+// Graphql query for gallery images
 const query = graphql`
   {
     allFile(filter: { relativeDirectory: { eq: "gallery" } }) {

@@ -8,9 +8,11 @@ const Footer = () => {
       <div className={styles.container}>
         <p>Two Spoons Cafe</p>
         <p>10 Fleur De Lys Road, Birkirkara</p>
+
         <section className={styles.phone}>
           <FaPhone /> <p>21382306 / 79227063</p>
         </section>
+
         <section className={styles.social}>
           <a href="https://www.facebook.com/TwoSpoonsMalta/" target="blank">
             <FaFacebookSquare />

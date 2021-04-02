@@ -1,10 +1,12 @@
 @import "../../css/variables.scss";
 
+// Section container
 .about {
   position: relative;
   overflow: hidden;
 }
 
+// Mint image positioned absolutely
 .mint {
   width: 175px;
   top: 10px;
@@ -13,12 +15,14 @@
   z-index: 90;
 }
 
+// Inner centered container
 .container {
   @include section-center;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
+// Text container
 .text {
   h2,
   p {
@@ -26,11 +30,13 @@
     z-index: 99;
   }
 
+  // Margin on the first paragraph to fit the mint image next to it
   p:first-of-type {
     margin-right: 3.5rem;
   }
 }
 
+// Image container translated slightly top-right
 .imageContainer {
   width: 80%;
   margin: 3rem auto 2rem;
@@ -38,12 +44,14 @@
   transform: translate(15px, -15px);
 }
 
+// Image (gatsby img component) translated slightly bottom-left
 .image {
   border-radius: 10px;
   transform: translate(-25px, 25px);
 }
 
 @media only screen and (min-width: 768px) {
+  // Increase padding on the section and set flex-row so text and image are adjacent
   .container {
     @include flex-row;
     padding-top: 4rem;
@@ -73,6 +81,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  // Increase mint and rosemary image sizes and move their position
   .mint {
     width: 200px;
     top: 15px;
@@ -91,6 +100,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
+  // Set the section to 100vh on large screens
   .about,
   .container {
     min-height: 100vh;
@@ -117,6 +127,7 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  // Increase herb image sizes and the space between about image and its BG
   .mint,
   .rosemary {
     width: 300px;
@@ -133,6 +144,7 @@
 }
 
 @media only screen and (min-width: 1536px) {
+  // Giga herbs
   .mint,
   .rosemary {
     width: 400px;

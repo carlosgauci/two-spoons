@@ -6,12 +6,16 @@ import pattern from "../../images/pattern.png"
 import styles from "./About.module.scss"
 
 const About = () => {
+  // Get images from graphql
   const { about, mint, rosemary } = useStaticQuery(query)
+
+  // get window width
   const width = useWindowSize()
 
   return (
     <section className={styles.about} id="about">
       <div className={styles.container}>
+        {/* Dont show the mint image between 768px and 1024px because of limited space */}
         {(width < 768 || width >= 1024) && (
           <Img
             fluid={mint.childImageSharp.fluid}
@@ -20,6 +24,7 @@ const About = () => {
           />
         )}
 
+        {/* Show rosemary image is screen width is over 1024px */}
         {width >= 1024 && (
           <Img
             fluid={rosemary.childImageSharp.fluid}
@@ -46,6 +51,8 @@ const About = () => {
             visit our restaurant.
           </p>
         </section>
+
+        {/* Image container with a patterned bg so we can offset image */}
         <section
           className={styles.imageContainer}
           style={{
@@ -60,6 +67,7 @@ const About = () => {
   )
 }
 
+// Graphql query for images
 const query = graphql`
   {
     about: file(relativePath: { eq: "about.jpg" }) {

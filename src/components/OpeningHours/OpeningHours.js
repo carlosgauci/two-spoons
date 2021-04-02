@@ -8,16 +8,20 @@ const OpeningHours = () => {
     <section className={styles.opening} id="contact">
       <div className={styles.container}>
         <h2>Opening Hours</h2>
-        <section className={styles.hours}>
+
+        <ul className={styles.hours}>
+          {/* Map opening hours from the imported array */}
           {hours.map(date => {
             return (
-              <div key={date.id} className={styles.date}>
+              <li key={date.id} className={styles.date}>
                 <p>{date.day}</p>
                 <p>{date.time}</p>
-              </div>
+              </li>
             )
           })}
-        </section>
+        </ul>
+
+        {/* Phone number / book button section */}
         <section className={styles.book}>
           <div className={styles.phone}>
             <FaPhone />
@@ -27,6 +31,7 @@ const OpeningHours = () => {
               <a href="tel:79227063">79227063</a>
             </h4>
           </div>
+          {/* Book button connected to foodbooking script */}
           <button
             data-glf-cuid="bb8c1dad-7535-46f5-889e-f6917d4856e8"
             data-glf-ruid="f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6"

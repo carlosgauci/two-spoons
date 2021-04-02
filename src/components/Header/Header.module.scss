@@ -1,5 +1,6 @@
 @import "../../css/variables.scss";
 
+// Header container
 .header {
   position: fixed;
   top: 0;
@@ -12,37 +13,33 @@
   transition: all 0.5s linear;
 }
 
+// Inner centered container
 .container {
   @include section-center;
   @include flex-row;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
+// Nav toggle icon
 .icon {
   font-size: 1.5rem;
   color: $white-text;
 }
 
+// Desktop navigation
 .navigation {
   display: none;
 }
 
 @media only screen and (min-width: 768px) {
-  .header {
-    height: $header-height;
-  }
-
-  .container {
-    height: 100%;
-    @include flex-row;
-    align-content: center;
-  }
-
+  // Hide nav icon
   .icon {
     display: none;
   }
 
+  // Display desktop nav
   .navigation {
     display: block;
 

@@ -3,12 +3,11 @@ import { graphql, useStaticQuery } from "gatsby"
 import { motion } from "framer-motion"
 import { overlayVariants, heroVariants } from "../../framer/variants"
 import BackgroundImage from "gatsby-background-image"
-
 import styles from "./Hero.module.scss"
 
 const Hero = () => {
+  // Get hero images, set art direction
   const { mobile, desktop } = useStaticQuery(query)
-
   const images = [
     mobile.childImageSharp.fluid,
     {
@@ -24,6 +23,7 @@ const Hero = () => {
       fluid={images}
       backgroundColor={`#fff`}
     >
+      {/* Overlay to dim hero image */}
       <motion.div
         className={styles.overlay}
         variants={overlayVariants}
@@ -40,6 +40,7 @@ const Hero = () => {
             >
               Delicious Mediterranean food, made with love.
             </motion.h1>
+
             <motion.p
               variants={heroVariants}
               initial="hidden"
@@ -49,6 +50,8 @@ const Hero = () => {
               Order your food online & collect it from our restaurant, or get it
               delivered through the Bolt Food app.
             </motion.p>
+
+            {/* Buttons connected to foodbooking script */}
             <section className={styles.buttons}>
               <motion.button
                 data-glf-cuid="bb8c1dad-7535-46f5-889e-f6917d4856e8"
@@ -60,6 +63,7 @@ const Hero = () => {
               >
                 MENU
               </motion.button>
+
               <motion.button
                 variants={heroVariants}
                 initial="hiddenButtonRight"
@@ -79,6 +83,7 @@ const Hero = () => {
   )
 }
 
+// Graphql query for hero images
 const query = graphql`
   {
     mobile: file(relativePath: { eq: "hero.jpg" }) {

@@ -1,3 +1,4 @@
+// Google maps component inside the Find Us section
 import React from "react"
 import LocationPin from "./LocationPin"
 import {
@@ -12,6 +13,7 @@ const containerStyle = {
   height: "100%",
 }
 
+// Restaurant coords
 const center = {
   lat: 35.89587711066413,
   lng: 14.464683953375353,

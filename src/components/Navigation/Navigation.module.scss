@@ -1,5 +1,6 @@
 @import "../../css/variables.scss";
 
+// Navigation container
 .navigation {
   position: fixed;
   width: 100%;
@@ -9,6 +10,7 @@
   z-index: 999;
 }
 
+// Inner centered container
 .container {
   position: relative;
   @include section-center;
@@ -30,6 +32,7 @@
   }
 }
 
+// Close nav icon
 .close {
   position: absolute;
   top: 1.75rem;

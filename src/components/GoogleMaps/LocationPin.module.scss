@@ -1,5 +1,6 @@
 @import "../../css/variables.scss";
 
+// Container for the button inside the google map
 .container {
   background-color: $white-text;
   padding: 0.5rem 1rem;
@@ -12,6 +13,7 @@
     font-size: 0.8rem;
   }
 
+  // Get directions button
   button {
     padding: 0.5rem 0.75rem;
     border: none;

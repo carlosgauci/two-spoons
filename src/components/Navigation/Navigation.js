@@ -1,3 +1,4 @@
+// Mobile navigation
 import React from "react"
 import { motion } from "framer-motion"
 import { navVariants, navItemVariants } from "../../framer/variants"
@@ -15,11 +16,13 @@ const Navigation = ({ setNavOpen }) => {
       exit="exit"
     >
       <section className={styles.container}>
+        {/* Close nav icon */}
         <FaAngleDoubleRight
           className={styles.close}
           onClick={() => setNavOpen(false)}
         />
         <ul>
+          {/* Menu and Reserve linked directly to foodbooking, since the script redirects mobile users there anyway */}
           <a
             href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6"
             target="blank"
@@ -34,6 +37,7 @@ const Navigation = ({ setNavOpen }) => {
               Menu
             </motion.li>
           </a>
+
           <a
             href="https://www.foodbooking.com/ordering/restaurant/menu/reservation?restaurant_uid=f0d82ad0-c557-4e3a-bfd5-c8142b65bbf6&reservation=true"
             target="blank"
@@ -48,6 +52,7 @@ const Navigation = ({ setNavOpen }) => {
               Reserve Table
             </motion.li>
           </a>
+
           <AnchorLink
             to="/#about"
             title="About Us"
@@ -62,6 +67,7 @@ const Navigation = ({ setNavOpen }) => {
               About Us
             </motion.li>
           </AnchorLink>
+
           <AnchorLink
             to="/#contact"
             title="Our team"

@@ -1,3 +1,4 @@
+// Location pin on google map with a link to directions
 import React from "react"
 import styles from "./LocationPin.module.scss"
 

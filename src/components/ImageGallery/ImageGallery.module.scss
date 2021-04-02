@@ -1,9 +1,11 @@
 @import "../../css/variables.scss";
 
+// Gallery section container
 .gallery {
   width: 100%;
   overflow: hidden;
 
+  // Remove default margins on images
   div {
     div {
       div {
